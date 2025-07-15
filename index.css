@@ -44,7 +44,7 @@ h1 {
 }
 
 .intro {
-    max-width: 50vw;
+    width: min(80vw, 800px);
     margin: 20px auto;
     padding: 20px;
     background-color: #181a3a;
