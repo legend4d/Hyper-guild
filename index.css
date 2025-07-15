@@ -1,0 +1,269 @@
+
+body {
+    background-color: #06073c;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 10px;
+    border: 2px transparent #fff;
+    padding: 20px;
+    cursor: url('cursor-image.png'), auto;
+    height: 100vh;
+    overflow: auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+.HyperClanText {
+    font-weight: bold;  
+    transition: font-size 0.3s ease;
+    font-size: 40px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.HyperClanText::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #fbfbbb, #ffff78, #ffff00); 
+    height: 5px;
+    width: 0%;
+    border-radius: 50px;
+    transition: width 0.5s ease;
+}
+
+.HyperClanText:hover::after {
+    width: 100%;
+    transition: width 0.5s ease;
+}
+
+.intro {
+    max-width: 50vw;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #181a3a;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 5rem;
+}
+
+.intro::after, .intro::before {
+    content: "";
+    background-image: conic-gradient(from var(--angle), #ffff00, #ffffd2, #ffff00);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 5px;
+    animation: spin 5s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.intro::before {
+    filter: blur(1.5rem);
+    opacity: 1;
+}
+
+.intro:hover::after {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cos {
+    color: #b5b5b5;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+}   
+
+
+.cos:hover {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 21px;
+    font: bold;
+    transition: color 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: transparent 2px #fff;
+    margin-top: 5rem;
+}
+
+.rulestext {
+    background: linear-gradient(90deg, #ff0000, #ffc8c8, #ff0000);
+    background-clip: text;
+    color: transparent;
+}
+
+.rules {
+    width: min(45vb, 400px);
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #181a3a;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, translate 0.3s ease;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.rules::after, .rules::before {
+    content: "";
+    background-image: conic-gradient(from var(--angle), #ff0000,#e9a9a9 , #ff0000);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 5px;
+    animation: spin 5s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rules::before {
+    filter: blur(1.5rem);
+    opacity: 1;
+}
+
+.rules:hover::after{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+h2 {
+    text-align: center;
+}
+
+.perktext {
+    background: linear-gradient(90deg, #22ff00, #caffc8, #1aff00);
+    background-clip: text;
+    color: transparent;
+}
+
+.perks {
+    width: min(45vb, 400px);
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #181a3a;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, translate 0.3s ease;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.perks::after, .perks::before {
+    content: "";
+    background-image: conic-gradient(from var(--angle), #09ff00,#cfffcd ,#09ff00);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 5px;
+    animation: spin 5s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.perks::before {
+    filter: blur(1.5rem);
+    opacity: 1;
+}
+
+.perks:hover::after{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.join {
+    width: min(45vb, 300px);
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #181a3a;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, translate 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    background-image: image('discord.svg');
+    background-size: 50px;
+}
+
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.join::after, .join::before {
+    content: "";
+    background-image: conic-gradient(from var(--angle), #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    animation: spin 5s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.join::before {
+    filter: blur(1.5rem);
+    opacity: 1;
+}
+
+.join:hover::after {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+
+
+@keyframes spin {
+    from { --angle: 0deg; }
+    to { --angle: 360deg; }
+}
+
+@keyframes rgbText {
+    0% { color: #ff0000; }
+    16% { color: #ffff00; }
+    33% { color: #00ff00; }
+    50% { color: #00ffff; }
+    66% { color: #0000ff; }
+    83% { color: #ff00ff; }
+    100% { color: #ff0000; }
+}
