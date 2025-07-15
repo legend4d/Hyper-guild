@@ -110,6 +110,7 @@ p {
     justify-content: center;
     border: transparent 2px #fff;
     margin-top: 5rem;
+    flex-wrap: wrap;
 }
 
 .rulestext {
